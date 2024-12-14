@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="container">
+    <button type="submit" class="btn" onclick="openPopup()">Preview</button>
+    <div class="popup" id="popup">
+        <img src="images/popup image.jpg">
+        <h2>WISHING YOU A GREAT YEAR AHEAD</h2>
+        <button type="button" onclick="closePopup()">Thanks!</button>
+    </div>
+    <img src="images/Pika.jpg" class="Bpfo">
+    <img src="images/pexels.jpg" class="pexels">
+    <img src="images/logo.jpg" class="logo">
+    <div class="mylines">
+        <p>My name is Abhinav.</p>
+        <p>I am a Y23 pursuing BS Chem degree.</p>
+        <p>I don't have any specific thing I am extremely skilled at or anything....</p>
+        <p>I like doing a lot of things like playing badminton with my friends, reading books,</p>
+        <p>playing games, coding, going on trips, etc. </p>
+    </div>
+    <div class="content">
+        <h1>New Year Starts In</h1>
+        <div class="countdown-timer">
+            <div>
+                <p id="demo">00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = days + ": " + hours + ": "
+        + minutes + ": " + seconds;
+    })
+</script>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>
+</body>
+</html>
